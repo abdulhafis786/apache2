@@ -42,7 +42,11 @@
 #
 # Copyright 2018 Your name here, unless otherwise noted.
 #
-class apache2 {
+class apache2
+(
+$port =  $apache2::params::port,
+)inherits apache2::params
+ {
 
 include apache2::install
 
